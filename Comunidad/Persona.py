@@ -9,6 +9,8 @@ class Persona(Base):
    nombre = Column(String)
    edad = Column(Integer)
 
+
+
    def __init__(self, nombre, edad):
        self.nombre = nombre
        self.edad = edad
