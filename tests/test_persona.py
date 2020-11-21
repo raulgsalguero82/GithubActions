@@ -41,20 +41,20 @@ class Test_persona(unittest.TestCase):
        self.assertIsNot(self.persona1, self.persona3)
        self.assertIs(self.persona1, persona_nueva)
 
-    def test_alamacenar(self):
-       self.persona1.almacenar()
+    #def test_alamacenar(self):
+    #   self.persona1.almacenar()
 
-       session = Session()
-       persona = session.query(Persona).filter(Persona.nombre == 'Alejandra' and Persona.edad == 25).first()
+    #   session = Session()
+    #   persona = session.query(Persona).filter(Persona.nombre == 'Alejandra' and Persona.edad == 25).first()
 
-       self.assertEqual(persona.dar_nombre(),'Alejandra')
-       self.assertEqual(persona.dar_edad(),25)
+    #   self.assertEqual(persona.dar_nombre(),'Alejandra')
+    #   self.assertEqual(persona.dar_edad(),25)
 
-    def test_recuperar(self):
-       session = Session()
-       session.add(self.persona2)
-       session.commit()
-       session.close()
+    #def test_recuperar(self):
+    #   session = Session()
+    #   session.add(self.persona2)
+    #   session.commit()
+    #   session.close()
 
        persona = Persona("",0)
        persona.recuperar("Diego", 22)
@@ -63,12 +63,12 @@ class Test_persona(unittest.TestCase):
        self.assertEqual(persona.dar_edad(),22)
 
 
-    def test_todos(self):
-       session = Session()       
-       session = Session()
-       personas = session.query(Persona).all()
-       session.close()       
-       self.assertIsNotNone(personas)
+    #def test_todos(self):
+    #   session = Session()       
+    #   session = Session()
+    #   personas = session.query(Persona).all()
+    #   session.close()       
+    #   self.assertIsNotNone(personas)
 
 
 if __name__ == '__main__':
