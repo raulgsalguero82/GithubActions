@@ -56,11 +56,11 @@ class Test_persona(unittest.TestCase):
     #   session.commit()
     #   session.close()
 
-       persona = Persona("",0)
-       persona.recuperar("Diego", 22)
+    #   persona = Persona("",0)
+    #   persona.recuperar("Diego", 22)
 
-       self.assertEqual(persona.dar_nombre(),'Diego')
-       self.assertEqual(persona.dar_edad(),22)
+    #   self.assertEqual(persona.dar_nombre(),'Diego')
+    #   self.assertEqual(persona.dar_edad(),22)
 
 
     #def test_todos(self):
