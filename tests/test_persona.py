@@ -6,6 +6,8 @@ from Comunidad.Base import Base, Session
 
 class Test_persona(unittest.TestCase):
 
+
+
     def test_prueba(self):
         self.assertEqual(1, 1)
 

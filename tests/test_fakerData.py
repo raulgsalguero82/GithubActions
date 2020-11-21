@@ -7,6 +7,8 @@ from faker import Faker
 
 class Test_fakerData(unittest.TestCase):
     
+
+
     def setUp(self):
         self.data_factory = Faker()
         self.data = [] 
