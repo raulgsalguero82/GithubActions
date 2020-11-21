@@ -41,14 +41,12 @@ class Test_persona(unittest.TestCase):
        self.assertIsNot(self.persona1, self.persona3)
        self.assertIs(self.persona1, persona_nueva)
 
-    #def test_alamacenar(self):
-    #   self.persona1.almacenar()
-
-    #   session = Session()
-    #   persona = session.query(Persona).filter(Persona.nombre == 'Alejandra' and Persona.edad == 25).first()
-
-    #   self.assertEqual(persona.dar_nombre(),'Alejandra')
-    #   self.assertEqual(persona.dar_edad(),25)
+    def test_alamacenar(self):
+       self.persona1.almacenar()
+       session = Session()
+       persona = session.query(Persona).filter(Persona.nombre == 'Alejandra' and Persona.edad == 25).first()
+       self.assertEqual(persona.dar_nombre(),'Alejandra')
+       self.assertEqual(persona.dar_edad(),25)
 
     #def test_recuperar(self):
     #   session = Session()
