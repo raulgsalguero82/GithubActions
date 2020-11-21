@@ -48,25 +48,25 @@ class Test_persona(unittest.TestCase):
        self.assertEqual(persona.dar_nombre(),'Alejandra')
        self.assertEqual(persona.dar_edad(),25)
 
-    #def test_recuperar(self):
-    #   session = Session()
-    #   session.add(self.persona2)
-    #   session.commit()
-    #   session.close()
+    def test_recuperar(self):
+       session = Session()
+       session.add(self.persona2)
+       session.commit()
+       session.close()
 
-    #   persona = Persona("",0)
-    #   persona.recuperar("Diego", 22)
+       persona = Persona("",0)
+       persona.recuperar("Diego", 22)
 
-    #   self.assertEqual(persona.dar_nombre(),'Diego')
-    #   self.assertEqual(persona.dar_edad(),22)
+       self.assertEqual(persona.dar_nombre(),'Diego')
+       self.assertEqual(persona.dar_edad(),22)
 
 
-    #def test_todos(self):
-    #   session = Session()       
-    #   session = Session()
-    #   personas = session.query(Persona).all()
-    #   session.close()       
-    #   self.assertIsNotNone(personas)
+    def test_todos(self):
+       session = Session()       
+       session = Session()
+       personas = session.query(Persona).all()
+       session.close()       
+       self.assertIsNotNone(personas)
 
 
 if __name__ == '__main__':
