@@ -34,7 +34,7 @@ class Test_persona(unittest.TestCase):
        self.assertEqual(self.persona1.calcular_anio_nacimiento(True), datetime.datetime.now().year - 250)
 
     def test_anio_nacimiento3(self):
-       self.assertEqual(self.persona1.calcular_anio_nacimiento(True), datetime.datetime.now().year - 250)
+       self.assertEqual(self.persona1.calcular_anio_nacimiento(True), datetime.datetime.now().year - 25)
        
     def test_asignacion(self):
       self.persona2.asignar_edad(28)
