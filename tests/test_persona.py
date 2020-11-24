@@ -60,8 +60,6 @@ class Test_persona(unittest.TestCase):
        self.assertEqual(persona.dar_nombre(),'Diego')
        self.assertEqual(persona.dar_edad(),22)
 
-
-
     def test_todos(self):
        session = Session()       
        session = Session()
