@@ -1,18 +1,11 @@
 name: Automerge
 on:
-  pull_request:
-    types:
-      - labeled
-      - unlabeled
-      - synchronize
-      - opened
-      - edited
-      - ready_for_review
-      - reopened
-      - unlocked
+  pull_request_review:
+    types: [submitted]
     branches: [ master ]
 jobs:
-  job1:
+  runPruebas:
+    if: github.event.review.state == 'approved' || !github.event.review
     name: Pruebas
     runs-on: ubuntu-latest
     steps:
@@ -35,8 +28,9 @@ jobs:
           coverage run -m unittest tests/test_persona.py
           coverage report -m 
   automerge:
+    if: github.event.review.state == 'approved' || !github.event.review
     name: Automerge
-    needs: job1
+    needs: runPruebas
     runs-on: ubuntu-latest
     steps:
       - name: automerge
