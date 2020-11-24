@@ -1,4 +1,4 @@
-name: AutoGenPR
+name: VerifyPR
 on:
   pull_request:
     branches: [ master ]
